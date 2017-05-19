@@ -45,6 +45,8 @@ HashTable.prototype.remove = function(k) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * Worst case time complexity with limited number of buckets 
+ * for .insert is O(n), for .retrieve is O(n), and for remove is O(1)
  */
 
 
