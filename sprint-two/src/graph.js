@@ -2,18 +2,23 @@
 
 // Instantiate a new graph
 var Graph = function() {
+  this.nodes = [];
+  this.edges = [];
 };
 
 // Add a node to the graph, passing in the node's value.
 Graph.prototype.addNode = function(node) {
+  this.nodes.push(node);
 };
 
 // Return a boolean value indicating if the value passed to contains is represented in the graph.
 Graph.prototype.contains = function(node) {
+  return this.nodes.includes(node);
 };
 
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
+  
 };
 
 // Returns a boolean indicating whether two specified nodes are connected.  Pass in the values contained in each of the two nodes.
