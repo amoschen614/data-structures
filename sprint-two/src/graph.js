@@ -18,8 +18,6 @@ Graph.prototype.contains = function(node) {
 
 // Removes a node from the graph.
 Graph.prototype.removeNode = function(node) {
-  // remove node if present
-  // remove any edges that may contain node
   let nodeIndex = this.nodes.indexOf(node);
   if (nodeIndex !== -1) {
     this.removeEdge(node, node);
