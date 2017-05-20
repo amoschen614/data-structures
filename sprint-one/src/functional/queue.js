@@ -14,9 +14,7 @@ var Queue = function() {
 
   someInstance.dequeue = function() {
     if (tailIndex - headIndex > 0) {
-      var headEl = storage[headIndex];
-      delete storage[headIndex++];
-      return headEl;
+      return storage[headIndex++];
     }
   };
 

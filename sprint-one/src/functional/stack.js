@@ -12,10 +12,7 @@ var Stack = function() {
 
   someInstance.pop = function() {
     if (size > 0) {
-      const tailEl = storage[size - 1];
-      delete storage[size - 1];
-      size--;
-      return tailEl;
+      return storage[--size];
     }
   };
 

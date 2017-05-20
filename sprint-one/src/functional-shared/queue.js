@@ -17,9 +17,7 @@ queueMethods.enqueue = function(value) {
 
 queueMethods.dequeue = function() {
   if (this.tailIndex - this.headIndex > 0) {
-    const value = this.storage[this.headIndex];
-    delete this.storage[this.headIndex++];
-    return value;
+    return this.storage[this.headIndex++];
   }
 }; 
 
