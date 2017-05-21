@@ -10,8 +10,16 @@ var LinkedList = function() {
       list.tail = newNode;
     } else { 
       list.tail.next = newNode;
+      newNode.prev = list.tail;
       list.tail = newNode;
     }
+  };
+
+  list.removeTail = function() {
+    var fmrTailVal = list.tail.value;
+    list.tail = list.tail.prev;
+    list.tail.next = null;
+    return fmrTailVal;
   };
 
   list.removeHead = function() {
@@ -41,6 +49,7 @@ var Node = function(value) {
 
   node.value = value;
   node.next = null;
+  node.prev = null;
 
   return node;
 };
